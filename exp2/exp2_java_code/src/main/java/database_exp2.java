@@ -65,7 +65,7 @@ public class database_exp2 {
             /* END Q5.1 */
             /* BEGIN Q5.2 */
             String sql_5_2 = " select customerName, address, telephone from customer;";
-            preparedStatement = connection.prepareStatement(sql_5_2, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            preparedStatement = connection.prepareStatement(sql_5_2, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             preparedStatement.setFetchSize(Integer.MIN_VALUE);
             preparedStatement.setFetchDirection(ResultSet.FETCH_REVERSE);
             ResultSet resultSet_5 = preparedStatement.executeQuery();
